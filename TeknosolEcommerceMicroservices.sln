@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{84298611-5C46-4727-ABF4-243639C804EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{90027A97-80B4-4D1D-9277-05042AD22A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teknosol.Services.Catalog", "Services\Catalog\Teknosol.Services.Catalog\Teknosol.Services.Catalog.csproj", "{019FAC09-74D3-4F5C-BA05-859809B19F0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90027A97-80B4-4D1D-9277-05042AD22A30} = {84298611-5C46-4727-ABF4-243639C804EF}
+		{019FAC09-74D3-4F5C-BA05-859809B19F0C} = {90027A97-80B4-4D1D-9277-05042AD22A30}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{019FAC09-74D3-4F5C-BA05-859809B19F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{019FAC09-74D3-4F5C-BA05-859809B19F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{019FAC09-74D3-4F5C-BA05-859809B19F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{019FAC09-74D3-4F5C-BA05-859809B19F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
