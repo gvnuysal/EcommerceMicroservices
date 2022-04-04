@@ -9,8 +9,8 @@ namespace Teknosol.Services.Catalog.Services
 {
     public interface ICategoryService
     {
-        Task<Response<List<CategoryDto>>> GetAllAsync(CancellationToken cancellationToken = default);
-        Task<Response<CategoryDto>> CreateAsync(Category category, CancellationToken cancellationToken = default);
-        Task<Response<CategoryDto>> GetByIdAsync(string id, CancellationToken cancellationToken = default);
+        Task<Response<List<CategoryDto>>> GetAllAsync();
+        Task<Response<CategoryDto>> CreateAsync(Category category);
+        Task<Response<CategoryDto>> GetByIdAsync(string id);
     }
 }

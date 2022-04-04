@@ -12,7 +12,7 @@ using Teknosol.Shared.Dtos;
 
 namespace Teknosol.Services.Catalog.Services
 {
-    public class CourseService:ICourseService
+    public class CourseService : ICourseService
     {
         private readonly IMongoCollection<Course> _courseCollection;
         private readonly IMongoCollection<Category> _categoryCollection;
@@ -32,16 +32,15 @@ namespace Teknosol.Services.Catalog.Services
         /// <summary>
         /// return courses
         /// </summary>
-        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public virtual async Task<Response<List<CourseDto>>> GetAllAsync(CancellationToken cancellationToken = default)
+        public virtual async Task<Response<List<CourseDto>>> GetAllAsync()
         {
-            var courses = await _courseCollection.Find(course => true).ToListAsync(cancellationToken);
+            var courses = await _courseCollection.Find(course => true).ToListAsync();
             if (courses.Any())
             {
                 foreach (var course in courses)
                 {
-                    course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync(cancellationToken);
+                    course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync();
                 }
             }
             else
@@ -56,17 +55,16 @@ namespace Teknosol.Services.Catalog.Services
         /// get course given by id
         /// </summary>
         /// <param name="id">course id information</param>
-        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public virtual async Task<Response<CourseDto>> GetByIdAsync(string id, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<CourseDto>> GetByIdAsync(string id)
         {
-            var course = await _courseCollection.Find<Course>(x => x.Id == id).FirstOrDefaultAsync(cancellationToken);
+            var course = await _courseCollection.Find<Course>(x => x.Id == id).FirstOrDefaultAsync();
             if (course == null)
             {
                 return Response<CourseDto>.Fail("Course not found", 404);
             }
 
-            course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync(cancellationToken);
+            course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync();
             return Response<CourseDto>.Success(_mapper.Map<CourseDto>(course), 200);
         }
 
@@ -74,17 +72,15 @@ namespace Teknosol.Services.Catalog.Services
         /// get all course by user id
         /// </summary>
         /// <param name="userId"></param>
-        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public virtual async Task<Response<List<CourseDto>>> GetAllByUserIdAsync(string userId, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<List<CourseDto>>> GetAllByUserIdAsync(string userId)
         {
-            var courses = await _courseCollection.Find<Course>(x => x.UserId == userId).ToListAsync(cancellationToken: cancellationToken);
+            var courses = await _courseCollection.Find<Course>(x => x.UserId == userId).ToListAsync();
             if (courses.Any())
             {
                 foreach (var course in courses)
                 {
-                    course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId)
-                        .FirstAsync(cancellationToken: cancellationToken);
+                    course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync();
                 }
             }
             else

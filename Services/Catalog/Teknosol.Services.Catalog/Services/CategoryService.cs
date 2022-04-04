@@ -27,9 +27,9 @@ namespace Teknosol.Services.Catalog.Services
         /// get all category information
         /// </summary>
         /// <returns>categories</returns>
-        public async Task<Response<List<CategoryDto>>> GetAllAsync(CancellationToken cancellationToken = default)
+        public async Task<Response<List<CategoryDto>>> GetAllAsync()
         {
-            var categories = await _categoryCollection.Find(cat => true).ToListAsync(cancellationToken);
+            var categories = await _categoryCollection.Find(cat => true).ToListAsync();
             return Response<List<CategoryDto>>.Success(_mapper.Map<List<CategoryDto>>(categories), 200);
         }
 
@@ -39,9 +39,9 @@ namespace Teknosol.Services.Catalog.Services
         /// <param name="category"></param>
         /// <param name="cancellationToken"></param>
         /// <returns>return created category</returns>
-        public async Task<Response<CategoryDto>> CreateAsync(Category category, CancellationToken cancellationToken = default)
+        public async Task<Response<CategoryDto>> CreateAsync(Category category)
         {
-            await _categoryCollection.InsertOneAsync(category, cancellationToken: cancellationToken);
+            await _categoryCollection.InsertOneAsync(category);
             return Response<CategoryDto>.Success(_mapper.Map<CategoryDto>(category), 200);
         }
 
@@ -51,9 +51,9 @@ namespace Teknosol.Services.Catalog.Services
         /// <param name="id">parameter</param>
         /// <param name="cancellationToken"></param>
         /// <returns>return a category</returns>
-        public async Task<Response<CategoryDto>> GetByIdAsync(string id, CancellationToken cancellationToken = default)
+        public async Task<Response<CategoryDto>> GetByIdAsync(string id)
         {
-            var category = await _categoryCollection.Find<Category>(x => x.Id == id).FirstOrDefaultAsync(cancellationToken);
+            var category = await _categoryCollection.Find<Category>(x => x.Id == id).FirstOrDefaultAsync();
             if (category == null)
             {
                 return Response<CategoryDto>.Fail("Category not found", 404);
