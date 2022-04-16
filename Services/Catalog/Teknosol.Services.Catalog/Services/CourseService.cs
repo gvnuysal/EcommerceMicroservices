@@ -48,7 +48,7 @@ namespace Teknosol.Services.Catalog.Services
                 courses = new List<Course>();
             }
 
-            return Response<List<CourseDto>>.Success(_mapper.Map<List<CourseDto>>(courses), 200);
+            return Response<List<CourseDto>>.Success(_mapper.Map<List<CourseDto>>(courses), 200,courses.Count);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Teknosol.Services.Catalog.Services
                 courses = new List<Course>();
             }
 
-            return Response<List<CourseDto>>.Success(_mapper.Map<List<CourseDto>>(courses), 200);
+            return Response<List<CourseDto>>.Success(_mapper.Map<List<CourseDto>>(courses), 200,courses.Count);
         }
 
         /// <summary>

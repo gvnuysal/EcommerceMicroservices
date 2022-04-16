@@ -5,21 +5,23 @@ namespace Teknosol.Shared.Dtos
 {
     public class Response<T>
     {
-        public T? Data { get; private set; }
+        public T? Items { get; private set; }public int? TotalCount { get; set; }
         [JsonIgnore] public int StatusCode { get; private set; }
 
         public bool IsSuccessful { get; private set; }
         public List<string> Errors { get; set; } = null!;
+        
 
         #region static factory methods
 
-        public static Response<T> Success(T data, int statusCode)
+        public static Response<T> Success(T data, int statusCode,int? totalCount=1)
         {
             return new Response<T>()
             {
-                Data = data,
+                Items = data,
                 IsSuccessful = true,
-                StatusCode = statusCode
+                StatusCode = statusCode,
+                TotalCount = totalCount
             };
         }
 
@@ -27,7 +29,7 @@ namespace Teknosol.Shared.Dtos
         {
             return new Response<T?>()
             {
-                Data = default(T),
+                Items = default(T),
                 StatusCode = statusCode,
                 IsSuccessful = true
             };

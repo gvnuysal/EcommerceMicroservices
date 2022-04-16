@@ -30,7 +30,7 @@ namespace Teknosol.Services.Catalog.Services
         public async Task<Response<List<CategoryDto>>> GetAllAsync()
         {
             var categories = await _categoryCollection.Find(cat => true).ToListAsync();
-            return Response<List<CategoryDto>>.Success(_mapper.Map<List<CategoryDto>>(categories), 200);
+            return Response<List<CategoryDto>>.Success(_mapper.Map<List<CategoryDto>>(categories) ,200,categories.Count);
         }
 
         /// <summary>
