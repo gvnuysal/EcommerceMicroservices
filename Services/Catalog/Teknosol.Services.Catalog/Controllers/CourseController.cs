@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Teknosol.Services.Catalog.Dtos;
-using Teknosol.Services.Catalog.Services;
-using Teknosol.Shared.ControllerBases;
+using Teknosol.Services.Catalog.Services; 
 using Teknosol.Shared.Dtos;
 
 namespace Teknosol.Services.Catalog.Controllers

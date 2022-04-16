@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using System.Collections.Generic; 
+using Newtonsoft.Json;
 
 namespace Teknosol.Shared.Dtos
 {
     public class Response<T>
     {
-        public T Data { get; private set; }
+        public T? Data { get; private set; }
         [JsonIgnore] public int StatusCode { get; private set; }
 
         public bool IsSuccessful { get; private set; }
-        public List<string> Errors { get; set; }
+        public List<string> Errors { get; set; } = null!;
 
         #region static factory methods
 
