@@ -16,11 +16,18 @@ namespace Teknosol.IdentityServer
                     "catalog_full_permission"
                 }
             },
-            new ApiResource("photo_stock")
+            new ApiResource("resource_photo_stock")
             {
                 Scopes =
                 {
                     "photo_stock_full_permission"
+                }
+            },
+            new ApiResource("resource_basket")
+            {
+                Scopes =
+                {
+                    "basket_full_permission"
                 }
             },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
@@ -46,6 +53,7 @@ namespace Teknosol.IdentityServer
             {
                 new ApiScope("catalog_full_permission", "Catalog API Permission"),
                 new ApiScope("photo_stock_full_permission", "Photo API Permission"),
+                new ApiScope("basket_full_permission", "Basket API Permission"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
             };
 
@@ -61,7 +69,7 @@ namespace Teknosol.IdentityServer
                     AllowedScopes =
                     {
                         "catalog_full_permission",
-                        "photo_stock_full_permission",
+                        "photo_stock_full_permission", 
                         IdentityServerConstants.LocalApi.ScopeName
                     }
                 },
@@ -74,6 +82,7 @@ namespace Teknosol.IdentityServer
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AllowedScopes =
                     { 
+                        "basket_full_permission",
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
