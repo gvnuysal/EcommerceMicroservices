@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teknosol.Services.Catalog",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{D4F29B2F-5B2D-4663-9089-219B6783513B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teknosol.IdentityServer", "IdentityServer\Teknosol.IdentityServer\Teknosol.IdentityServer.csproj", "{1B46DC57-72DD-40C6-9233-A78AFCE05F4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teknosol.IdentityServer", "IdentityServer\Teknosol.IdentityServer\Teknosol.IdentityServer.csproj", "{1B46DC57-72DD-40C6-9233-A78AFCE05F4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{28AC7B45-D2ED-4C12-9648-4B78F75AE578}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teknosol.Services.PhotoStock", "Services\PhotoStock\Teknosol.Services.PhotoStock\Teknosol.Services.PhotoStock.csproj", "{8D14010F-2ADE-4AEC-8579-E6FB2EA1038E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +33,18 @@ Global
 		{90387020-9E64-4FF3-8452-4D9D7F42A8A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35F9146B-95C4-4940-B9D5-BCBD8F27F146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35F9146B-95C4-4940-B9D5-BCBD8F27F146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F9146B-95C4-4940-B9D5-BCBD8F27F146}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{35F9146B-95C4-4940-B9D5-BCBD8F27F146}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35F9146B-95C4-4940-B9D5-BCBD8F27F146}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35F9146B-95C4-4940-B9D5-BCBD8F27F146}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{1B46DC57-72DD-40C6-9233-A78AFCE05F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1B46DC57-72DD-40C6-9233-A78AFCE05F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B46DC57-72DD-40C6-9233-A78AFCE05F4A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{1B46DC57-72DD-40C6-9233-A78AFCE05F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B46DC57-72DD-40C6-9233-A78AFCE05F4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B46DC57-72DD-40C6-9233-A78AFCE05F4A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8D14010F-2ADE-4AEC-8579-E6FB2EA1038E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D14010F-2ADE-4AEC-8579-E6FB2EA1038E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D14010F-2ADE-4AEC-8579-E6FB2EA1038E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D14010F-2ADE-4AEC-8579-E6FB2EA1038E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,8 @@ Global
 		{90387020-9E64-4FF3-8452-4D9D7F42A8A7} = {0F2641A4-B931-4F89-ABC6-E22A0A412D7A}
 		{35F9146B-95C4-4940-B9D5-BCBD8F27F146} = {90027A97-80B4-4D1D-9277-05042AD22A30}
 		{1B46DC57-72DD-40C6-9233-A78AFCE05F4A} = {D4F29B2F-5B2D-4663-9089-219B6783513B}
+		{28AC7B45-D2ED-4C12-9648-4B78F75AE578} = {84298611-5C46-4727-ABF4-243639C804EF}
+		{8D14010F-2ADE-4AEC-8579-E6FB2EA1038E} = {28AC7B45-D2ED-4C12-9648-4B78F75AE578}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4301D456-3D18-4B83-B217-BDA0855296FB}
