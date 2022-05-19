@@ -30,6 +30,13 @@ namespace Teknosol.IdentityServer
                     "basket_full_permission"
                 }
             },
+            new ApiResource("resource_discount")
+            {
+                Scopes =
+                {
+                    "discount_full_permission"
+                }
+            },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -54,6 +61,7 @@ namespace Teknosol.IdentityServer
                 new ApiScope("catalog_full_permission", "Catalog API Permission"),
                 new ApiScope("photo_stock_full_permission", "Photo API Permission"),
                 new ApiScope("basket_full_permission", "Basket API Permission"),
+                new ApiScope("discount_full_permission", "Discount API Permission"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
             };
 
@@ -69,7 +77,7 @@ namespace Teknosol.IdentityServer
                     AllowedScopes =
                     {
                         "catalog_full_permission",
-                        "photo_stock_full_permission", 
+                        "photo_stock_full_permission",
                         IdentityServerConstants.LocalApi.ScopeName
                     }
                 },
@@ -81,18 +89,19 @@ namespace Teknosol.IdentityServer
                     ClientSecrets = { new Secret("secret".Sha256()) },
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AllowedScopes =
-                    { 
+                    {
                         "basket_full_permission",
+                        "discount_full_permission",
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        IdentityServerConstants.StandardScopes.OfflineAccess, 
+                        IdentityServerConstants.StandardScopes.OfflineAccess,
                         IdentityServerConstants.LocalApi.ScopeName,
                         "roles"
                     },
-                    AccessTokenLifetime = 1*60*60,
+                    AccessTokenLifetime = 1 * 60 * 60,
                     RefreshTokenExpiration = TokenExpiration.Absolute,
-                    AbsoluteRefreshTokenLifetime = (int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
+                    AbsoluteRefreshTokenLifetime = (int)(DateTime.Now.AddDays(60) - DateTime.Now).TotalSeconds,
                     RefreshTokenUsage = TokenUsage.ReUse
                 }
             };
