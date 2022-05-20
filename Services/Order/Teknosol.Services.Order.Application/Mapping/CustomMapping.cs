@@ -8,8 +8,10 @@ namespace Teknosol.Services.Order.Application.Mapping
     {
         public CustomMapping()
         {
-            CreateMap<Service.Order.Domain.OrderAggregate.Order, OrderDto>();
-            CreateMap<OrderItem, OrderItemDto>();
+            CreateMap<Service.Order.Domain.OrderAggregate.Order, OrderDto>().ReverseMap();
+            CreateMap<OrderItem, OrderItemDto>().ReverseMap();
+            CreateMap<Address, AddressDto>().ReverseMap();
+            
         }
     }
 }
