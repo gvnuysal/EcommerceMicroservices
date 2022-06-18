@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Teknosol.Services.Order.Domain.Core;
 
-namespace Teknosol.Service.Order.Domain.OrderAggregate
+namespace Teknosol.Services.Order.Domain.OrderAggregate
 {
     public class Order:Entity,IAggregateRoot
     {
@@ -12,6 +12,10 @@ namespace Teknosol.Service.Order.Domain.OrderAggregate
         public string BuyerId { get;private set; }
         private readonly List<OrderItem> _orderItems;
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+        public Order()
+        {
+
+        }
 
         public Order(string buyerId, Address address)
         {

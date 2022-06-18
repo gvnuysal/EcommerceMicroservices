@@ -5,8 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Order\Teknosol.Services.Order.Infrastructure\Teknosol.Services.Order.Infrastructure.csproj" />
-    <ProjectReference Include="..\Teknosol.Service.Order.Domain\Teknosol.Service.Order.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Teknosol.Shared\Teknosol.Shared.csproj" />
+    <ProjectReference Include="..\Teknosol.Services.Order.Domain\Teknosol.Services.Order.Domain.csproj" />
+    <ProjectReference Include="..\Teknosol.Services.Order.Infrastructure\Teknosol.Services.Order.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

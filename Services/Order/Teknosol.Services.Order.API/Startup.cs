@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Teknosol.Services.Order.Infrastructure;
 
 namespace Teknosol.Services.Order.API
 {
@@ -26,12 +28,14 @@ namespace Teknosol.Services.Order.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<OrderDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                    conf => { conf.MigrationsAssembly("Teknosol.Services.Order.Infrastructure"); });
+            });
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Teknosol.Services.Order.API", Version = "v1" });
-            });
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "Teknosol.Services.Order.API", Version = "v1" }); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,10 +54,7 @@ namespace Teknosol.Services.Order.API
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }

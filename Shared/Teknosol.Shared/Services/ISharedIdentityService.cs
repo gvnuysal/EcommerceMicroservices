@@ -2,5 +2,5 @@
 
 public interface ISharedIdentityService
 {
-    public string GetUserId { get; }
+    public string? GetUserId { get; }
 }

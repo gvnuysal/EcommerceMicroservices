@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Teknosol.Service.Order.Domain.OrderAggregate;
+using Teknosol.Services.Order.Domain.OrderAggregate;
 using Teknosol.Services.Order.Application.Dtos;
 
 namespace Teknosol.Services.Order.Application.Mapping
@@ -8,10 +8,9 @@ namespace Teknosol.Services.Order.Application.Mapping
     {
         public CustomMapping()
         {
-            CreateMap<Service.Order.Domain.OrderAggregate.Order, OrderDto>().ReverseMap();
+            CreateMap<Domain.OrderAggregate.Order, OrderDto>().ReverseMap();
             CreateMap<OrderItem, OrderItemDto>().ReverseMap();
             CreateMap<Address, AddressDto>().ReverseMap();
-            
         }
     }
 }

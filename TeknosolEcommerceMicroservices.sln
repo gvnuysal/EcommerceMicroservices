@@ -35,11 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teknosol.Services.Order.API
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teknosol.Services.Order.Application", "Services\Order\Teknosol.Services.Order.Application\Teknosol.Services.Order.Application.csproj", "{5F3B7E5E-AF6D-436C-B81D-0D5D1D2CD6CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teknosol.Service.Order.Domain", "Services\Order\Teknosol.Service.Order.Domain\Teknosol.Service.Order.Domain.csproj", "{4F642B91-5F75-4C71-B638-7899ABCB0814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teknosol.Services.Order.Domain", "Services\Order\Teknosol.Services.Order.Domain\Teknosol.Services.Order.Domain.csproj", "{4F642B91-5F75-4C71-B638-7899ABCB0814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teknosol.Services.Order.Domain.Core", "Services\Order\Teknosol.Services.Order.Domain.Core\Teknosol.Services.Order.Domain.Core.csproj", "{EAA4763C-5EEA-4C0F-8EF9-FBC8F9E135EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teknosol.Services.Order.Domain.Core", "Services\Order\Teknosol.Services.Order.Domain.Core\Teknosol.Services.Order.Domain.Core.csproj", "{EAA4763C-5EEA-4C0F-8EF9-FBC8F9E135EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teknosol.Services.Order.Infrastructure", "Order\Teknosol.Services.Order.Infrastructure\Teknosol.Services.Order.Infrastructure.csproj", "{1E1BFDEC-B609-464E-8163-72A2B719ACE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teknosol.Services.Order.Infrastructure", "Services\Order\Teknosol.Services.Order.Infrastructure\Teknosol.Services.Order.Infrastructure.csproj", "{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,10 +89,10 @@ Global
 		{EAA4763C-5EEA-4C0F-8EF9-FBC8F9E135EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAA4763C-5EEA-4C0F-8EF9-FBC8F9E135EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAA4763C-5EEA-4C0F-8EF9-FBC8F9E135EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E1BFDEC-B609-464E-8163-72A2B719ACE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E1BFDEC-B609-464E-8163-72A2B719ACE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E1BFDEC-B609-464E-8163-72A2B719ACE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E1BFDEC-B609-464E-8163-72A2B719ACE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,7 +113,7 @@ Global
 		{5F3B7E5E-AF6D-436C-B81D-0D5D1D2CD6CB} = {464A47E7-E595-4244-A699-6F6A2522F079}
 		{4F642B91-5F75-4C71-B638-7899ABCB0814} = {464A47E7-E595-4244-A699-6F6A2522F079}
 		{EAA4763C-5EEA-4C0F-8EF9-FBC8F9E135EE} = {464A47E7-E595-4244-A699-6F6A2522F079}
-		{1E1BFDEC-B609-464E-8163-72A2B719ACE0} = {464A47E7-E595-4244-A699-6F6A2522F079}
+		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4} = {464A47E7-E595-4244-A699-6F6A2522F079}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4301D456-3D18-4B83-B217-BDA0855296FB}

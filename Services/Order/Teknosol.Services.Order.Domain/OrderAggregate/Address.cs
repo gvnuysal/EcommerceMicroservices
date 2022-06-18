@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Teknosol.Services.Order.Domain.Core;
 
-namespace Teknosol.Service.Order.Domain.OrderAggregate
+namespace Teknosol.Services.Order.Domain.OrderAggregate
 {
     public class Address : ValueObject
     {

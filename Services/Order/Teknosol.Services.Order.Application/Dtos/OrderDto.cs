@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Teknosol.Service.Order.Domain.OrderAggregate;
+using Teknosol.Services.Order.Domain.OrderAggregate;
 
 namespace Teknosol.Services.Order.Application.Dtos
 {
