@@ -11,8 +11,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Teknosol.Services.Order.Infrastructure;
+using Teknosol.Shared.Services;
 
 namespace Teknosol.Services.Order.API
 {
@@ -33,7 +35,9 @@ namespace Teknosol.Services.Order.API
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
                     conf => { conf.MigrationsAssembly("Teknosol.Services.Order.Infrastructure"); });
             });
-
+            services.AddHttpContextAccessor();
+            services.AddMediatR(typeof(Teknosol.Services.Order.Application.Handlers.CreateOrderCommandHandler).Assembly);
+            services.AddScoped<ISharedIdentityService, SharedIdentityService>();
             services.AddControllers();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "Teknosol.Services.Order.API", Version = "v1" }); });
         }
