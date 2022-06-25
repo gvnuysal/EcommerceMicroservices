@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Teknosol.Shared.Dtos;
 
 namespace Teknosol.Services.FakePayment.Controllers
 {
@@ -9,7 +10,7 @@ namespace Teknosol.Services.FakePayment.Controllers
         [HttpPost]
         public IActionResult ReceivePayment()
         {
-            return Ok(true);
+            return Ok(Response<NoContent>.Success(200));
         }
     }
 }
