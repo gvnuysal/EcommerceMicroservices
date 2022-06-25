@@ -14,7 +14,7 @@ namespace Teknosol.Shared.Dtos
 
         #region static factory methods
 
-        public static Response<T> Success(T data, int statusCode,int? totalCount=1)
+        public static Response<T> Success(T data, int statusCode,int? totalCount=0)
         {
             return new Response<T>()
             {

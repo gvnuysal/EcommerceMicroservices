@@ -31,7 +31,7 @@ namespace Teknosol.Services.Order.Application.Handlers
             await _orderDbContext.Orders.AddAsync(newOrder,cancellationToken);
             await _orderDbContext.SaveChangesAsync(cancellationToken);
 
-            return Response<CreatedOrderDto>.Success(new CreatedOrderDto() { OrderId = newOrder.Id },200);
+            return Response<CreatedOrderDto>.Success(new CreatedOrderDto() { OrderId = newOrder.Id },200,1);
         }
     }
 }

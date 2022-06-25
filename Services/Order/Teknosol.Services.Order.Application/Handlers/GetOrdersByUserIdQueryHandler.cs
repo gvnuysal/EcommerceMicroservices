@@ -27,7 +27,7 @@ namespace Teknosol.Services.Order.Application.Handlers
                 .ToListAsync(cancellationToken);
             if (!orders.Any())
             {
-                return Response<List<OrderDto>>.Success(new List<OrderDto>(), 200);
+                return Response<List<OrderDto>>.Success(new List<OrderDto>(), 200,orders.Count);
             }
 
             var ordersDto = ObjectMapper.Mapper.Map<List<OrderDto>>(orders);

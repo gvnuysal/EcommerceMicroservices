@@ -41,6 +41,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teknosol.Services.Order.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teknosol.Services.Order.Infrastructure", "Services\Order\Teknosol.Services.Order.Infrastructure\Teknosol.Services.Order.Infrastructure.csproj", "{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FakePayment", "FakePayment", "{B0E38B2B-D3D7-401B-AD0F-65F1D8034324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teknosol.Services.FakePayment", "Services\FakePayment\Teknosol.Services.FakePayment\Teknosol.Services.FakePayment.csproj", "{E4DBFF2B-0E8E-495F-89BE-F4B15A4C7FC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,10 @@ Global
 		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4DBFF2B-0E8E-495F-89BE-F4B15A4C7FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4DBFF2B-0E8E-495F-89BE-F4B15A4C7FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4DBFF2B-0E8E-495F-89BE-F4B15A4C7FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4DBFF2B-0E8E-495F-89BE-F4B15A4C7FC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +122,8 @@ Global
 		{4F642B91-5F75-4C71-B638-7899ABCB0814} = {464A47E7-E595-4244-A699-6F6A2522F079}
 		{EAA4763C-5EEA-4C0F-8EF9-FBC8F9E135EE} = {464A47E7-E595-4244-A699-6F6A2522F079}
 		{B87D8E20-90D6-4A3C-9A30-34222ED19AC4} = {464A47E7-E595-4244-A699-6F6A2522F079}
+		{B0E38B2B-D3D7-401B-AD0F-65F1D8034324} = {84298611-5C46-4727-ABF4-243639C804EF}
+		{E4DBFF2B-0E8E-495F-89BE-F4B15A4C7FC5} = {B0E38B2B-D3D7-401B-AD0F-65F1D8034324}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4301D456-3D18-4B83-B217-BDA0855296FB}

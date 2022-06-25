@@ -37,7 +37,14 @@ namespace Teknosol.IdentityServer
                     "discount_full_permission"
                 }
             },
-            
+            new ApiResource("resource_fake_payment")
+            {
+                Scopes =
+                {
+                    "fake_payment_full_permission"
+                }
+            },
+
             new ApiResource("resource_order")
             {
                 Scopes =
@@ -70,7 +77,8 @@ namespace Teknosol.IdentityServer
                 new ApiScope("photo_stock_full_permission", "Photo API Permission"),
                 new ApiScope("basket_full_permission", "Basket API Permission"),
                 new ApiScope("discount_full_permission", "Discount API Permission"),
-                new ApiScope("order_full_permission","Order API Permission"),
+                new ApiScope("order_full_permission", "Order API Permission"),
+                new ApiScope("fake_payment_full_permission", "Fake Payment API"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
             };
 
@@ -102,6 +110,7 @@ namespace Teknosol.IdentityServer
                         "basket_full_permission",
                         "discount_full_permission",
                         "order_full_permission",
+                        "fake_payment_full_permission",
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
